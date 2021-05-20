@@ -1,0 +1,27 @@
+"""
+Descripción del problema: Un investigador desea conocer cuál de 5 números es el mayor 
+de todos, además de verificar que todos estén en el rango que va desde 0 a 1500, y mostrar 
+dicho número en un mensaje.
+Escriba una función qué reciba cómo parámetros: cinco números enteros (numero1, numero2,
+numero3, numero4, numero5) de los cuales la función deberá de verificar que todos sean 
+números entre el 0 y el 1500 (incluyendo los extremos), si alguno de los números esta fuera 
+de este rango se deberá mostrar el siguiente mensaje “El numero {numeroi} esta fuera del 
+intervalo” donde “numeroi” es el número que esta fuera del rango. Si todos los números están 
+dentro del rango el programa deberá de entregar un mensaje con el siguiente formato “El 
+numero mayor de entre los introducidos es el: {numeromayor}”. 
+"""
+
+def mayor_de_cinco(a,b,c,d,e):
+    arrayx = [a,b,c,d,e]
+    flag = True
+    for x in arrayx:
+        if(x<0 or x>1500):
+            flag = False
+            return "El numero "+str(x)+" esta fuera del intervalo"
+            
+    if flag:
+        mayor = max(arrayx)
+        return "El numero mayor de entre los introducidos es: "+str(mayor)    
+    
+
+
